@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI News Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI News Recommendation System</h1>
+        <form method="POST">
+            <div class="form-group">
+                <label for="query">Content-Based Recommendation:</label>
+                <input type="text" id="query" name="query" placeholder="Enter keywords (e.g. AI, finance)">
+            </div>
+            <div class="form-group">
+                <label for="user_id">Collaborative Recommendation:</label>
+                <input type="number" id="user_id" name="user_id" placeholder="Enter user ID (e.g. 1)">
+            </div>
+            <button type="submit">Get Recommendations</button>
+        </form>
+
+        {% if content_results %}
+        <h2>Content-Based Recommendations for "{{ query }}"</h2>
+        <ul>
+            {% for rec in content_results %}
+            <li><strong>{{ rec.title }}</strong> ({{ rec.category }})</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if collab_results %}
+        <h2>Collaborative Recommendations for User {{ user_id }}</h2>
+        <ul>
+            {% for rec in collab_results %}
+            <li><strong>{{ rec.title }}</strong> ({{ rec.category }})</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+</body>
+</html>
