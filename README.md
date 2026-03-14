@@ -21,24 +21,7 @@ This project addresses the challenge by building a **data-driven recommender sys
 - **Scalable Design**: Modular folder structure with reproducible pipelines.  
 
 ---
-## Project Structure
-ai-news-recommendation-system/
-├── requirements.txt         # Python dependencies
-├── app.py                   # Flask entry point (main web app)
-│
-├── data/                    # Datasets
-│   ├── news_dataset.csv     # Synthetic or real news datase
-├── src/                     # Core source code
-│   ├── __init__.py
-│   ├── recommender.py       # Content-based & collaborative filtering logic
-│
-│
-├── templates/               # Frontend HTML 
-│   └── index.html           # Main UI page
-│
-├── static/                  # Static assets (CSS)
-│   ├── style.css
----
+
 
 ##  Tech Stack
 - **Python** (Flask, Pandas, NumPy, scikit-learn)
