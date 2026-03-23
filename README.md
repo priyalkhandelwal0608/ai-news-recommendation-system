@@ -15,7 +15,7 @@ A high-performance, hybrid news recommendation engine that leverages Natural Lan
 ---
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **Backend:** Python 3.x, Flask
 * **Data Processing:** Pandas, NumPy
@@ -25,7 +25,7 @@ A high-performance, hybrid news recommendation engine that leverages Natural Lan
 
 ---
 
-## 🔧 Installation & Setup
+##  Installation & Setup
 
 1.  **Clone the repository:**
     ```bash
@@ -55,7 +55,7 @@ A high-performance, hybrid news recommendation engine that leverages Natural Lan
 
 ---
 
-## 🧠 Core Methodology
+##  Core Methodology
 
 ### 1. Content-Based Filtering
 The system processes article text using **TfidfVectorizer** (removing English stop words). When a query is entered, it calculates the **Cosine Similarity** between the query vector and the pre-computed `tfidf_matrix` to find the most relevant articles based on textual context.
@@ -79,5 +79,5 @@ AI-NEWS-RECOMMENDATION-SYSTEM/
 ├── app.py                     # Flask server and routing logic
 └── requirements.txt           # Project dependencies
 
----
+
 
