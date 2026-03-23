@@ -28,3 +28,13 @@ AI-NEWS-RECOMMENDATION-SYSTEM/
 │   └── index.html             # Flask Jinja2 template for the web dashboard
 ├── app.py                     # Flask server and routing logic
 └── requirements.txt           # Project dependencies
+
+---
+##🛠️ Tech Stack
+Backend: Python 3.x, Flask
+
+Data Processing: Pandas, NumPy
+
+Machine Learning: Scikit-Learn (TfidfVectorizer, NearestNeighbors, Cosine Similarity)
+
+Frontend: HTML5, CSS3, Google Fonts
