@@ -1,10 +1,10 @@
-# AI News Recommendation System 📰🤖
+# AI News Recommendation System 
 
 A high-performance, hybrid news recommendation engine that leverages Natural Language Processing (NLP) and Collaborative Filtering to deliver personalized content. Built with **Flask**, **Scikit-Learn**, and **Pandas**.
 
 ---
 
-## 🌟 Features
+##  Features
 
 - **Hybrid Recommendation Engine**: Combines content-based and collaborative filtering to provide diverse and accurate suggestions.
 - **Content-Based Filtering**: Uses **TF-IDF (Term Frequency-Inverse Document Frequency)** and **Cosine Similarity** to match articles based on text semantics and search queries.
@@ -14,7 +14,7 @@ A high-performance, hybrid news recommendation engine that leverages Natural Lan
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 AI-NEWS-RECOMMENDATION-SYSTEM/
@@ -30,11 +30,54 @@ AI-NEWS-RECOMMENDATION-SYSTEM/
 └── requirements.txt           # Project dependencies
 
 ---
-##🛠️ Tech Stack
-Backend: Python 3.x, Flask
+---
 
-Data Processing: Pandas, NumPy
+##  Tech Stack
 
-Machine Learning: Scikit-Learn (TfidfVectorizer, NearestNeighbors, Cosine Similarity)
+* **Backend:** Python 3.x, Flask
+* **Data Processing:** Pandas, NumPy
+* **Machine Learning:** Scikit-Learn (TfidfVectorizer, NearestNeighbors, Cosine Similarity)
+* **Frontend:** HTML5, CSS3, Google Fonts
+* **Deployment:** Flask (Local or Cloud platforms like Render/Heroku)
 
-Frontend: HTML5, CSS3, Google Fonts
+---
+
+##  Installation & Setup
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/ai-news-recommendation-system.git](https://github.com/your-username/ai-news-recommendation-system.git)
+    cd ai-news-recommendation-system
+    ```
+
+2.  **Set up a virtual environment:**
+    ```bash
+    python -m venv venv
+    # On Windows:
+    venv\Scripts\activate
+    # On macOS/Linux:
+    source venv/bin/activate
+    ```
+
+3.  **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  **Run the application:**
+    ```bash
+    python app.py
+    ```
+    Access the application at `http://127.0.0.1:5000`.
+
+---
+
+##  Core Methodology
+
+### 1. Content-Based Filtering
+The system processes article text using **TfidfVectorizer** (removing English stop words). When a query is entered, it calculates the **Cosine Similarity** between the query vector and the pre-computed `tfidf_matrix` to find the most relevant articles based on textual context.
+
+### 2. Collaborative Filtering
+Using a synthetic user-item interaction matrix, the system fits a **Nearest Neighbors** model with a `cosine` metric. It identifies users with similar reading patterns and recommends articles those peers have rated highly that the current user hasn't interacted with yet.
+
+---
