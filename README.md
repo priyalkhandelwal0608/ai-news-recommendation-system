@@ -64,6 +64,14 @@ The system processes article text using **TfidfVectorizer** (removing English st
 Using a synthetic user-item interaction matrix, the system fits a **Nearest Neighbors** model with a `cosine` metric. It identifies users with similar reading patterns and recommends articles those peers have rated highly that the current user hasn't interacted with yet.
 
 ---
+## Tech Stack
+
+- **Quantum Computing:** Qiskit, Qiskit Aer Simulator  
+- **Backend & Data Processing:** Python 3.x, NumPy  
+- **Machine Learning:** Scikit-Learn (KNeighborsClassifier)  
+- **Visualization (optional):** Matplotlib for plotting distances or results  
+
+---
 ##  Project Structure
 
 ```text
